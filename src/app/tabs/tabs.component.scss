@@ -1,0 +1,87 @@
+.tabs {
+  display: flex;
+  column-gap: 1rem;
+  padding: .75rem;
+  background-color: rgba(#fff, .25);
+  border-radius: .5rem;
+  backdrop-filter: blur(3px);
+  margin: 3.125rem .75rem .75rem;
+
+  .tab {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      background-color: rgba(#fff, .8);
+      position: absolute;
+      bottom: -.75rem;
+      left: 0;
+      right: 0;
+      height: 3px;
+      width: 50%;
+      margin: 0 auto;
+      border-radius: 1rem;
+      transition: all .3s;
+      transform: scaleX(0);
+      opacity: 0;
+    }
+
+    .tab-tile {
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      transition: all .2s;
+
+      i {
+        color: #444;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: .5rem;
+        background-color: #B3E8E5;
+        z-index: -1;
+        transition: all .25s ease-in-out;
+        opacity: .85;
+      }
+
+      &:hover::before {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    // Animation for the tab tile
+    &.selected .tab-tile {
+      transform: translateY(-50%);
+      transition-duration: .3s;
+      transition-timing-function: cubic-bezier(0, 0, 0, 2);
+
+      &::before {
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(#000, .4);
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    // Tab underline to show on active tab
+    &.selected::after {
+      transition-delay: .2s;
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    // Remove outline when selected
+    &.selected {
+      outline: none;
+    }
+  }
+}
