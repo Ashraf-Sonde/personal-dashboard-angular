@@ -6,6 +6,7 @@ html,
 body {
   height: 100%;
   font-family: 'SF Pro Display', sans-serif;
+  color: #222;
 }
 
 h1 {
@@ -14,9 +15,82 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 1.5rem;
+}
+
+h1.bold,
+h2.bold {
+  font-weight: bold;
 }
 
 .container {
   max-width: 850px;
   margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 1rem;
+
+  &.btn-center {
+    justify-content: center;
+  }
+
+  &.btn-space-between {
+    justify-content: space-between;
+  }
+}
+
+.btn {
+  padding: .5rem 1rem;
+  background: rgba(#000, .65);
+  font-weight: 600;
+  color: #f9f9f9;
+  border: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 1rem;
+  border-radius: .25rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(#000, .7);
+    backdrop-filter: blur(5px);
+  }
+
+  &:active {
+    background-color: rgba(#000, .7);
+  }
+}
+
+.has-blurred-white-bg {
+  background-color: rgba(#fff, .35);
+  backdrop-filter: blur(10px);
+}
+
+.input-field,
+.textarea-field {
+  font-size: 1.15rem;
+  width: 100%;
+  font-family: 'SF Pro Display', sans-serif;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: .25rem;
+  display: block;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.textarea-field {
+  resize: vertical;
+  min-height: 5rem;
 }
