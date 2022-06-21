@@ -2,34 +2,12 @@
   height: 100%;
   overflow-y: auto;
 
-  &__list {
-
-    &__card {
-      background-color: rgba(#000, .6);
-      backdrop-filter: blur(5px);
-      padding: 1rem;
-      border-radius: .5rem;
-      color: #d9d9d9;
-      cursor: pointer;
-      transition: .15s;
-
-      &:hover {
-        background-color: rgba(#000, .7);
-      }
-
-      &__title {
-        font-weight: 500;
-        font-size: 1.2rem;
-        margin-bottom: .25rem;
-      }
-
-      &__content {
-
-      }
-    }
-
-    .add-btn i {
-      margin-right: .25rem;
-    }
+  .add-btn i {
+    margin-right: .25rem;
   }
+}
+
+app-note-card {
+  display: block;
+  margin-bottom: .5rem;
 }
