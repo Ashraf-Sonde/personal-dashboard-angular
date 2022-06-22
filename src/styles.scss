@@ -23,6 +23,10 @@ h2.bold {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 850px;
   margin: 0 auto;
@@ -30,14 +34,15 @@ h2.bold {
 
 .btn-container {
   display: flex;
+  gap: .75rem;
   margin-top: 1rem;
 
   &.btn-center {
     justify-content: center;
   }
 
-  &.btn-space-between {
-    justify-content: space-between;
+  .align-end {
+    margin-left: auto;
   }
 }
 
