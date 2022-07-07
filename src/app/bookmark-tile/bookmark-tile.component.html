@@ -1,4 +1,6 @@
 <div class="bookmark-tile">
-  <img src="https://angular.io/assets/images/favicons/favicon.ico" class="bookmark-tile__icon" alt="Favicon">
-  <p class="bookmark-tile__text">Angular</p>
+  <div class="bookmark-tile-icon-wrapper">
+    <img [src]="tileIconSrc" class="bookmark-tile__icon" alt="Favicon">
+  </div>
+  <p class="bookmark-tile__text">{{ bookmark.name }}</p>
 </div>

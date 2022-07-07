@@ -11,6 +11,14 @@
   cursor: pointer;
   transition: all .1s;
 
+  .bookmark-tile-icon-wrapper {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__icon {
     max-width: 1.75rem;
   }
