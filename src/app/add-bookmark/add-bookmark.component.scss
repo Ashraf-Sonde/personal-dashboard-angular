@@ -1,0 +1,13 @@
+.add-bookmark-wrapper {
+  max-height: 100%;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: .5rem;
+
+  .form-label {
+    margin-bottom: .25rem;
+    display: block;
+    font-weight: 600;
+    color: #333;
+  }
+}
