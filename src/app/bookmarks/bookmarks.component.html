@@ -4,6 +4,10 @@
       <app-bookmark-tile *ngFor="let bookmark of bookmarks" [bookmark]="bookmark"></app-bookmark-tile>
     </div>
     <div class="btn-container btn-center">
+      <a routerLink="manage" class="btn manage-btn">
+        <i class="material-icons">settings</i>
+        Manage
+      </a>
       <a routerLink="add" class="btn add-btn">
         <i class="material-icons-outlined">add</i>
         Add
