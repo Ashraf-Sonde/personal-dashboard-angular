@@ -3,6 +3,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {TodoService} from '../shared/todo.service';
 import {Todo} from '../shared/todo.model';
 import {NgForm} from '@angular/forms';
+import {NotificationService} from '../shared/notification.service';
 
 @Component({
   selector: 'app-edit-todo',
@@ -16,7 +17,8 @@ export class EditTodoComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private todoService: TodoService
+    private todoService: TodoService,
+    private notificationService: NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +33,8 @@ export class EditTodoComponent implements OnInit {
     if (form.invalid) return
 
     this.todoService.updateTodo(this.todo.id, form.value);
+
+    this.notificationService.show('Todo Updated!', 5000, '#0AA1DD');
     this.router.navigateByUrl('/todos');
   }
 

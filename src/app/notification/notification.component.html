@@ -1,0 +1,10 @@
+<ng-container *ngFor="let n of notification">
+  <div
+    class="notification"
+    [ngStyle]="{ 'background-color': n.bgColor }"
+    *ngIf="n.text"
+    @notificationAnim
+  >
+    {{ n.text }}
+  </div>
+</ng-container>
